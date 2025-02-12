@@ -36,10 +36,10 @@ class MultipleImagesController extends Controller
         try {
             // Validate the incoming request
             $request->validate([
-                // 'user_name' => 'required|string',
-                // 'user_email' => 'required|email',
-                // 'multiple_images' => 'required|array|min:1',
-                // 'multiple_images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',  // Validate each file
+                'user_name' => 'required|string',
+                'user_email' => 'required|email',
+                'multiple_images' => 'required|array|min:1',
+                'multiple_images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',  // Validate each file
             ]);
 
             // Upload images to the server
