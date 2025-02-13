@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/upload', [MultipleImagesController::class, 'store']);
 Route::get('/users', [MultipleImagesController::class, 'index']);
+Route::get('/show/{id}', [MultipleImagesController::class, 'show']);
+Route::post('/update/{id}', [MultipleImagesController::class, 'update']);
+Route::delete('/delete/{id}', [MultipleImagesController::class, 'destroy']);
